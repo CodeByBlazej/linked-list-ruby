@@ -14,7 +14,7 @@ class LinkedList
     else
       current_node = @head
       new_node = Node.new(value)
-      if current_node.next_node != nil
+      while current_node.next_node != nil
         current_node = current_node.next_node
       end
       current_node.next_node = new_node
