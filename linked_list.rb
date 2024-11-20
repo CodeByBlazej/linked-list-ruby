@@ -23,17 +23,29 @@ class LinkedList
 
   def prepend(value)
     if @head.nil?
-      @head = value
-      @tail = value
+      @head = Node.new(value)
     else
-      node.next_node = @head
-      @head = value
-      node.amount_of_nodes += 1
+      current_node = @head
+      new_node = Node.new(value)
+      # while current_node.next_node != nil
+      #   current_node.new_node = current_node.new_node.new_node
+      # end
+      current_node.next_node = current_node
+      current_node = new_node
+
     end
   end
 
   def size
-    puts node.amount_of_nodes
+    counter = 1
+    current_node = @head
+    
+    while current_node.next_node != nil
+      counter += 1
+      current_node = current_node.next_node
+    end
+    
+    puts counter
   end
 
   def head
@@ -58,7 +70,11 @@ class LinkedList
 
   def to_s
     p @head
-    p @tail
+    # current_node = @head
+    # while current_node.next_node != nil
+    #   p @value
+    # end
+    # puts @head.value
   end
 
 end
