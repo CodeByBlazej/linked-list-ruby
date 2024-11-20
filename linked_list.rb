@@ -25,13 +25,9 @@ class LinkedList
     if @head.nil?
       @head = Node.new(value)
     else
-      current_node = @head
-      new_node = Node.new(value)
-      # while current_node.next_node != nil
-      #   current_node.new_node = current_node.new_node.new_node
-      # end
-      current_node.next_node = current_node
-      current_node = new_node
+      current_head = Node.new(value)
+      current_head.next_node = @head
+      
 
     end
   end
@@ -44,7 +40,7 @@ class LinkedList
       counter += 1
       current_node = current_node.next_node
     end
-    
+
     puts counter
   end
 
