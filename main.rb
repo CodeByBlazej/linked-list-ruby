@@ -11,6 +11,7 @@ list.prepend('cat')
 list.prepend('parrot')
 
 list.size
+list.head
 
 
 
