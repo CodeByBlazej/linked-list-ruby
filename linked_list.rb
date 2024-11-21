@@ -48,7 +48,18 @@ class LinkedList
   end
 
   def tail
-    puts @tail
+    if @head.nil?
+      puts "This linked list is empty..."
+    else
+      current_node = @head
+
+      while current_node.next_node != nil
+        @tail = current_node.next_node
+        current_node = current_node.next_node
+      end
+
+      puts "Tail node is: #{@tail}, it's value is: #{@tail.value}"
+    end
   end
 
   def at(index)
