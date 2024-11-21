@@ -12,6 +12,7 @@ list.prepend('parrot')
 
 list.size
 list.head
+list.tail
 
 
 
