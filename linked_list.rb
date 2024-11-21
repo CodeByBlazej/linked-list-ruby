@@ -27,8 +27,7 @@ class LinkedList
     else
       current_head = Node.new(value)
       current_head.next_node = @head
-      
-
+      @head = current_head
     end
   end
 
