@@ -44,7 +44,7 @@ class LinkedList
   end
 
   def head
-    puts "Head node is: #{@head}, it's value is: #{@head.value}"
+    puts "\nHead node is: #{@head}, it's value is: #{@head.value}"
   end
 
   def tail
@@ -58,18 +58,19 @@ class LinkedList
         current_node = current_node.next_node
       end
 
-      puts "Tail node is: #{@tail}, it's value is: #{@tail.value}"
+      puts "\nTail node is: #{@tail}, it's value is: #{@tail.value}"
     end
   end
 
   def at(index)
-    if index == 0
-      puts @head
-    elsif index == 1
-      puts @head.next_node
-    else 
-      until index do 
-        puts node.next_node * index
+    counter = 0
+    current_node = @head
+
+    while current_node.next_node != nil
+      counter += 1
+      current_node = current_node.next_node
+      if counter == index
+        puts "\nNode at index #{index} is: #{current_node}, it's value is: #{current_node.value}"
       end
     end
   end
