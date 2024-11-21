@@ -44,7 +44,7 @@ class LinkedList
   end
 
   def head
-    puts @head
+    puts "Head node is: #{@head}, it's value is: #{@head.value}"
   end
 
   def tail
