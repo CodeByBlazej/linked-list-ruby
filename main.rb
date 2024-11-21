@@ -13,6 +13,10 @@ list.prepend('parrot')
 list.size
 list.head
 list.tail
+list.at(1)
+list.pop
+list.size
+list.tail
 
 
 
