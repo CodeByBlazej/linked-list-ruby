@@ -15,6 +15,11 @@ list.head
 list.tail
 list.at(1)
 
+list.contains?('dog')
+list.contains?('cat')
+list.contains?('parrot')
+list.contains?('elephant')
+
 puts list
 list.pop
 list.size
