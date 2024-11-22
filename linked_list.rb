@@ -89,6 +89,36 @@ class LinkedList
     @tail.next_node = nil
   end
 
+  def contains?(value)
+    current_node = @head
+    searched_value = nil
+
+    if current_node.value == value
+      searched_value = true
+    else
+      while current_node.next_node != nil
+        if current_node.value == value || current_node.next_node.value == value
+          searched_value = true
+        else
+          searched_value = false
+        end
+        current_node = current_node.next_node
+      end
+    end
+    puts searched_value
+
+
+    # while current_node.next_node != nil
+    #   if @head.value == value || current_node.value == value || current_node.next_node == value
+    #     searched_value = true
+    #   else
+    #     searched_value = false
+    #   end
+    #   current_node = current_node.next_node
+    # end
+    # puts searched_value
+  end
+
   def to_s
     p @head
     # current_node = @head
