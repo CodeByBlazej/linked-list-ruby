@@ -129,19 +129,18 @@ class LinkedList
     current_node = @head
     displayed_format = []
 
-    while current_node.next_node != nil
-      displayed_format << "( #{current_node.value} ) -> "
-      current_node = current_node.next_node
+    while current_node != nil
+      if current_node.next_node.nil?
+        displayed_format << "( #{current_node.value} ) -> "
+        displayed_format << 'nil'
+        current_node = current_node.next_node
+      else
+        displayed_format << "( #{current_node.value} ) -> "
+        current_node = current_node.next_node
+      end
     end
 
-    p displayed_format
-
-    p @head
-    # current_node = @head
-    # while current_node.next_node != nil
-    #   p @value
-    # end
-    # puts @head.value
+    puts displayed_format.join('')
   end
 
 end
