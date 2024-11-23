@@ -126,6 +126,16 @@ class LinkedList
   end
 
   def to_s
+    current_node = @head
+    displayed_format = []
+
+    while current_node.next_node != nil
+      displayed_format << "( #{current_node.value} ) -> "
+      current_node = current_node.next_node
+    end
+
+    p displayed_format
+
     p @head
     # current_node = @head
     # while current_node.next_node != nil
