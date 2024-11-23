@@ -66,7 +66,11 @@ class LinkedList
     counter = 0
     current_node = @head
 
-    while current_node.next_node != nil
+    if index == 0
+      puts "\nNode at index #{index} is: #{@head}, it's value is: #{@head.value}"
+    end
+    
+    while current_node != nil
       counter += 1
       current_node = current_node.next_node
       if counter == index
