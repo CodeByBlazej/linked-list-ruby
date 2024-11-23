@@ -105,8 +105,24 @@ class LinkedList
         current_node = current_node.next_node
       end
     end
-    
+
     puts searched_value
+  end
+
+  def find(value)
+    current_node = @head
+    counter = 1
+
+    if current_node.value == value
+      puts "\nIndex of '#{value}' is 0"
+    else
+      while current_node.next_node.value != value
+        counter += 1
+        current_node = current_node.next_node
+      end
+
+      puts "\nIndex of '#{value}' is #{counter}"
+    end
   end
 
   def to_s
