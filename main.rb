@@ -20,6 +20,8 @@ list.contains?('cat')
 list.contains?('parrot')
 list.contains?('elephant')
 
+list.find('cat')
+
 puts list
 list.pop
 list.size
