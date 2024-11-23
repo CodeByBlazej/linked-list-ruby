@@ -32,10 +32,10 @@ class LinkedList
   end
 
   def size
-    counter = 1
+    counter = 0
     current_node = @head
     
-    while current_node.next_node != nil
+    while current_node != nil
       counter += 1
       current_node = current_node.next_node
     end
