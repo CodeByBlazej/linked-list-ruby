@@ -142,7 +142,15 @@ class LinkedList
     newly_added_node = nil
     temporary_node = nil
 
+    if index == 0
+      temporary_node = current_node
+      @head = new_node
+      @head.next_node = temporary_node
+    end
+
     while current_node != nil
+      counter += 1
+
       if index == counter
         temporary_node = current_node.next_node
         newly_added_node = new_node
@@ -150,7 +158,6 @@ class LinkedList
         newly_added_node.next_node = temporary_node
       end
 
-      counter += 1
       current_node = current_node.next_node
     end
   end
