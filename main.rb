@@ -23,6 +23,9 @@ list.contains?('elephant')
 list.find('parrot')
 puts list
 list.insert_at('elephant', 1)
+puts list
+
+list.remove_at(1)
 
 puts list
 list.pop
