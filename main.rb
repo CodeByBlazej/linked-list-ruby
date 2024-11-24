@@ -25,13 +25,11 @@ puts list
 list.insert_at('elephant', 1)
 puts list
 
-list.remove_at(1)
+list.remove_at(2)
 
 puts list
 list.pop
 list.size
 list.tail
-
-
 
 puts list
