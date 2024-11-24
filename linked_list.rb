@@ -160,8 +160,13 @@ class LinkedList
     counter = 0
     previous_node = nil
 
+    if index == 0
+      @head = current_node.next_node
+    end
+
     while current_node != nil
       counter += 1
+
       previous_node = current_node
       current_node = current_node.next_node
 
