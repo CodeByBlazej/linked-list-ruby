@@ -139,20 +139,20 @@ class LinkedList
     current_node = @head
     counter = 0
     new_node = Node.new(value)
+    newly_added_node = nil
     temporary_node = nil
-    previous_node = nil
 
     while current_node != nil
-      temporary_node = current_node
-      current_node = current_node.next_node
-      counter += 1
-      
       if index == counter
-        current_node = new_node
-        current_node.next_node = temporary_node
+        temporary_node = current_node.next_node
+        newly_added_node = new_node
+        current_node.next_node = newly_added_node
+        newly_added_node.next_node = temporary_node
       end
-    end
 
+      counter += 1
+      current_node = current_node.next_node
+    end
   end
 
   def to_s
