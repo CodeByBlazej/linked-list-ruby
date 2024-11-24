@@ -20,7 +20,7 @@ list.contains?('cat')
 list.contains?('parrot')
 list.contains?('elephant')
 
-list.find('cat')
+list.find('parrot')
 
 puts list
 list.pop
