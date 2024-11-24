@@ -115,17 +115,23 @@ class LinkedList
 
   def find(value)
     current_node = @head
-    counter = 1
+    counter = 0
 
     if current_node.value == value
       puts "\nIndex of '#{value}' is 0"
     else
-      while current_node.next_node.value != value
-        counter += 1
-        current_node = current_node.next_node
+      while current_node != nil
+        if current_node.value == value
+          puts "\nIndex of '#{value}' is #{counter}"
+          return
+        elsif current_node.value != value && current_node.next_node == nil
+          puts "\nIndex of '#{value}' is not found. '#{value}' doesn't exist."
+          return
+        else
+          counter += 1
+          current_node = current_node.next_node
+        end
       end
-
-      puts "\nIndex of '#{value}' is #{counter}"
     end
   end
 
