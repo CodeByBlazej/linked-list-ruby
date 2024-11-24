@@ -155,6 +155,22 @@ class LinkedList
     end
   end
 
+  def remove_at(index)
+    current_node = @head
+    counter = 0
+    previous_node = nil
+
+    while current_node != nil
+      counter += 1
+      previous_node = current_node
+      current_node = current_node.next_node
+
+      if index == counter
+        previous_node.next_node = current_node.next_node
+      end
+    end
+  end
+
   def to_s
     current_node = @head
     displayed_format = []
