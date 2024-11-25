@@ -9,6 +9,9 @@ list = LinkedList.new
 list.prepend('dog')
 list.prepend('cat')
 list.prepend('parrot')
+list.prepend('hamster')
+list.prepend('snake')
+list.prepend('turtle')
 
 list.size
 list.head
@@ -18,6 +21,7 @@ list.at(1)
 list.contains?('dog')
 list.contains?('cat')
 list.contains?('parrot')
+list.contains?('turtle')
 list.contains?('elephant')
 
 list.find('parrot')
