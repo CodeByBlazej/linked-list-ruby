@@ -40,7 +40,7 @@ class LinkedList
       current_node = current_node.next_node
     end
 
-    puts counter
+    puts "\nList size is #{counter}"
   end
 
   def head
@@ -97,12 +97,13 @@ class LinkedList
     current_node = @head
     searched_value = nil
 
-    if current_node.value == value
+    if @head.value == value
       searched_value = true
     else
       while current_node.next_node != nil
         if current_node.value == value || current_node.next_node.value == value
           searched_value = true
+          break
         else
           searched_value = false
         end
